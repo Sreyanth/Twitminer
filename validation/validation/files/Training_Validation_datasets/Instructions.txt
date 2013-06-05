@@ -1,0 +1,39 @@
+Requirements: Bash shell in a Linux OS.
+Prerequisites: python 2.7 or later
+               curl 7.22 or later
+
+1. Extract the contents of the archive in the same directory.
+
+2. Start linux bash shell
+Execute the following command from the location of the extracted archive contents:
+> ./run_train_validation.sh
+
+3. Use the files training.txt and validation.txt as training and validation datasets respectively.
+
+
+If any of the above fails or there are queries/problems downloading the dataset, do mail us at
+twitminer2013@gmail.com with the Subject as 'DATASET_PROBLEM'. We'll respond immediately.
+
+
+
+
+INPUT DATA FORMATS:
+Each training data is contained in the file training.txt in the following format:
+    <tweetid label tweettext>
+where the 'label' is either 'Sports' or 'Politics' for the tweet identified by 'tweetid' and has text 'tweettext'
+
+Each validation data is contained in the file validation.txt in the following format:
+    <tweetid tweettext>
+The validation data has no 'label'. The task is to assign label to this data(either 'Sports' or 'Politics')
+
+Only the data contained in training.txt is to be used for the training of the model/algorithm. No external data sources
+outside training.txt is allowed. Also any other field other than 'label' or 'tweettext' is STRICTLY FORBIDDEN. 
+
+OUTPUT DATA FORMAT:
+Please create an output file with the following format:
+    <tweetid label>
+where the 'label' is either 'Sports' or 'Politics' assigned to the tweet with identifier 'tweetid' by your algorithm.
+
+
+
+
